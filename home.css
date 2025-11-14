@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(180deg, #2d2145 0%, #1b1533 100%);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 430px;
+  padding: 20px;
+}
+
+/* Top bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.hello .hi {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.name {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.right-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.profile {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.search-btn {
+  background: rgba(255,255,255,0.15);
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Section titles */
+.section-title {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.sub {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-bottom: 12px;
+}
+
+/* 🌈 Stronger, darker, colorful meal plan cards */
+.meal-plan {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+/* Base card */
+.meal-card {
+  position: relative;
+  padding: 16px 18px 12px;
+  border-radius: 22px;
+  overflow: hidden;
+  backdrop-filter: blur(4px);
+  color: #000; /* text is BLACK */
+  font-weight: 500;
+  animation: fadeSlideUp 0.4s ease both;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Slight stagger animation */
+.meal-card:nth-child(1) { animation-delay: 0s; }
+.meal-card:nth-child(2) { animation-delay: 0.05s; }
+.meal-card:nth-child(3) { animation-delay: 0.1s; }
+.meal-card:nth-child(4) { animation-delay: 0.15s; }
+
+/* Darker gradients per meal */
+.meal-card:nth-child(1) {
+  background: linear-gradient(135deg, #ff7fba 0%, #ffb7dd 100%);
+}
+.meal-card:nth-child(2) {
+  background: linear-gradient(135deg, #ffcf4d 0%, #ffb600 100%);
+}
+.meal-card:nth-child(3) {
+  background: linear-gradient(135deg, #5fb5ff 0%, #93d0ff 100%);
+}
+.meal-card:nth-child(4) {
+  background: linear-gradient(135deg, #5fdc4f 0%, #a8f98e 100%);
+}
+
+/* Keep text readable */
+.meal-card-header,
+.meal-items,
+.meal-edit-btn {
+  position: relative;
+  z-index: 1;
+}
+
+/* Decorative side stripe */
+.meal-card::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 7px;
+  height: 50%;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.3);
+  z-index: 0;
+}
+
+/* Header row for title + edit button */
+.meal-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.meal-edit-page-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: #fff3a2;
+  color: #1b1533;
+  cursor: pointer;
+}
+
+/* 🌈 Light pastel meal plan cards, with BLACK text */
+.meal-plan {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.meal-card {
+  position: relative;
+  padding: 14px 16px;
+  border-radius: 20px;
+  overflow: hidden;
+  color: #000;              /* BLACK text */
+  font-weight: 500;
+}
+
+/* Light but visible gradients */
+.meal-card:nth-child(1) {
+  background: linear-gradient(135deg, #ffc6ec 0%, #ffe4fa 100%);
+}
+.meal-card:nth-child(2) {
+  background: linear-gradient(135deg, #fff3a2 0%, #ffe9c6 100%);
+}
+.meal-card:nth-child(3) {
+  background: linear-gradient(135deg, #c6e5ff 0%, #e3f2ff 100%);
+}
+.meal-card:nth-child(4) {
+  background: linear-gradient(135deg, #d8ffc6 0%, #f0ffe5 100%);
+}
+
+.meal-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.meal-title-block {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.meal-icon {
+  font-size: 1.1rem;
+}
+
+.meal-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #000;
+}
+
+.meal-cal {
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.7);
+  color: #000;
+  font-weight: 600;
+}
+
+.meal-items {
+  font-size: 0.85rem;
+  opacity: 0.95;
+  color: #000;
+}
+
+/* Thin dark stripe on side */
+.meal-card::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 45%;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.25);
+}
+
+/* Phone */
+@media (max-width: 400px) {
+  .meal-card {
+    padding: 12px 13px;
+  }
+  .meal-name {
+    font-size: 0.9rem;
+  }
+  .meal-items {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* Schedule cards */
+.schedule-card {
+  background: rgba(255,255,255,0.10);
+  padding: 15px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.schedule-card.secondary {
+  background: rgba(255,255,255,0.05);
+}
+
+.schedule-card .icon {
+  width: 18px;
+  height: 18px;
+  background: #f4e987;
+  border-radius: 50%;
+}
+
+.details .class {
+  font-weight: 600;
+}
+
+.details .time {
+  opacity: 0.7;
+  font-size: 0.85rem;
+}
+
+.start-btn {
+  background: #fff3a2;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Upcoming */
+.upcoming-title {
+  margin-top: 10px;
+}
+
+.upcoming-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 140px;
+  overflow-y: auto;
+  padding-right: 4px;
+  margin-bottom: 10px;
+}
+
+.upcoming-list::-webkit-scrollbar {
+  width: 6px;
+}
+.upcoming-list::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3);
+  border-radius: 999px;
+}
+
+.upcoming-empty {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* Bottom nav */
+.bottom-nav {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.bottom-nav .nav {
+  width: 60px;
+  height: 60px;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bottom-nav .nav.active {
+  background: white;
+  color: #1b1533;
+}
+
+/* Phone tweaks */
+@media (max-width: 400px) {
+  .section-title {
+    font-size: 1.3rem;
+  }
+}

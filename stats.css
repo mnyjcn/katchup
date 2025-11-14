@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(180deg, #2d2145 0%, #1b1533 100%);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 430px;
+}
+
+/* Header */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.top-bar h1 {
+  font-size: 1.7rem;
+}
+
+/* Stat cards */
+.stat-card {
+  background: rgba(255,255,255,0.10);
+  padding: 14px 16px;
+  border-radius: 18px;
+  margin-bottom: 14px;
+}
+
+.stat-card .label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.stat-card .value {
+  margin-top: 4px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.stat-card .hint {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+/* Graph */
+.graph-card {
+  margin-top: 6px;
+  background: rgba(255,255,255,0.07);
+  padding: 18px;
+  border-radius: 22px;
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.graph-card canvas {
+  width: 100% !important;
+  height: 160px !important;
+}
+
+/* Day selector */
+.day-selector {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.day-selector span {
+  opacity: 0.7;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.day-selector .active {
+  opacity: 1;
+  font-weight: 700;
+}
+
+/* Bottom nav */
+.bottom-nav {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.bottom-nav .nav {
+  width: 60px;
+  height: 60px;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bottom-nav .nav.active {
+  background: white;
+  color: #1b1533;
+}
+
+@media (max-width: 400px) {
+  .top-bar h1 {
+    font-size: 1.5rem;
+  }
+}

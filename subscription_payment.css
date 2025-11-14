@@ -1,0 +1,84 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg,#2d2145,#1b1533);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 430px;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.back-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255,255,255,0.4);
+  background: transparent;
+  border-radius: 16px;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 18px;
+  margin-top: 15px;
+  border-radius: 18px;
+}
+
+.label { opacity: 0.8; }
+.value { font-size: 1.2rem; margin-top: 4px; font-weight: 600; }
+
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  background: #3a2b5a;
+  border: none;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.pay-btn {
+  width: 100%;
+  padding: 12px;
+  background: #fff3a2;
+  border: none;
+  border-radius: 18px;
+  font-weight: 600;
+  color: #1b1533;
+  cursor: pointer;
+}
+
+.msg { margin-top: 10px; opacity: 0.85; }
+
+.bottom-nav {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  width: 60px;
+  height: 60px;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

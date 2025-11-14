@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - Fitness Journey</title>
+  <link rel="stylesheet" href="register.css" />
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+      <a href="welcomepage.html" class="back-btn">←</a>
+      <div class="logo-circle">
+        <img src="" alt="Logo">
+      </div>
+    </div>
+
+  
+    <h1>Your fitness glow-up starts here. Let’s go!</h1>
+
+
+    <form id="registerForm">
+     
+      <input
+        type="text"
+        id="name"
+        placeholder="Your name"
+        autocomplete="name"
+        required
+      />
+
+      
+      <input
+        type="email"
+        id="email"
+        placeholder="Your email"
+        autocomplete="email"
+        required
+      />
+
+   
+      <div class="password-field">
+        <input
+          type="password"
+          id="password"
+          placeholder="Password"
+          required
+        />
+        <span class="toggle">👁️</span>
+      </div>
+
+ 
+      <div class="password-field">
+        <input
+          type="password"
+          id="confirmPassword"
+          placeholder="Repeat password"
+          required
+        />
+        <span class="toggle">👁️</span>
+      </div>
+
+      <p id="errorMsg" class="error-msg"></p>
+
+      <button type="submit" class="register-btn">Register</button>
+    </form>
+
+    <p class="login-text">
+      Already have an account?
+      <a href="login.html">Login Now</a>
+    </p>
+  </div>
+
+  <script src="register.js"></script>
+</body>
+</html>

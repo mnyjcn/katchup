@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Subscription</title>
+  <link rel="stylesheet" href="subscription.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Back to settings -->
+    <button class="back-btn" onclick="location.href='settings.html'">←</button>
+
+    <!-- Text header -->
+    <div class="text-area">
+      <h1>Premium<br>Subscription</h1>
+      <p class="desc">
+        Exclusive workouts, personalized plans,<br>
+        progress tracking, and more — all in one place.
+      </p>
+    </div>
+
+    <!-- Hero image on the right -->
+    <!-- change src to your actual image filename -->
+    <img src="premiumgirl.png" class="hero-img" alt="Premium">
+
+    <!-- Two plans side by side -->
+    <div class="plans">
+      <div class="plan-card basic" data-plan="Start" data-price="99">
+        <h3>Start <span class="price">₱99/m</span></h3>
+        <ul>
+          <li>Basic workouts</li>
+          <li>Weekly challenges</li>
+          <li>Limited tracking</li>
+          <li>Limited bookings</li>
+        </ul>
+      </div>
+
+      <div class="plan-card pro" data-plan="Pro" data-price="299">
+        <h3>Pro <span class="price">₱299/m</span></h3>
+        <ul>
+          <li>All workouts</li>
+          <li>Custom plans</li>
+          <li>Full tracking & motivation</li>
+          <li>Unlimited bookings</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar button -->
+    <button class="start-bar" id="startBarBtn">
+      <span class="start-icon">➤</span>
+      <span class="start-text">Start the Plan</span>
+      <span class="start-arrows">›››</span>
+    </button>
+  </div>
+
+  <script src="subscription.js"></script>
+</body>
+</html>

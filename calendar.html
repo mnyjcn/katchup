@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Class</title>
+  <link rel="stylesheet" href="calendar.css" />
+</head>
+<body>
+  <div class="container">
+
+    <header class="top">
+      <p class="date-text" id="dateText">DECEMBER 11, 2025</p>
+
+      <div class="book-row">
+        <h1>Book a Class</h1>
+        <div class="arrows">
+          <button class="arrow-btn" id="prevBtn">‹</button>
+          <button class="arrow-btn" id="nextBtn">›</button>
+        </div>
+      </div>
+
+      
+      <div class="weekday-row">
+        <span>Mo</span><span>Tu</span><span>We</span>
+        <span>Th</span><span>Fr</span><span>Sa</span><span>Su</span>
+      </div>
+
+  
+      <div class="date-row" id="dateRow">
+       
+      </div>
+    </header>
+
+
+    <section class="sheet">
+      <div class="handle"></div>
+      <h2>Class Listings</h2>
+
+      <div id="classesList" class="classes-list">
+      
+      </div>
+    </section>
+
+  
+ <!-- Bottom nav -->
+    <div class="bottom-nav">
+      <button class="nav" onclick="location.href='home.html'">⬜</button>
+      <button class="nav" onclick="location.href='calendar.html'">📅</button>
+      <button class="nav" onclick="location.href='stats.html'">📊</button>
+      <button class="nav active" onclick="location.href='settings.html'">⚙️</button>
+    </div>
+  </div>
+
+  <script src="calendar.js"></script>
+</body>
+</html>

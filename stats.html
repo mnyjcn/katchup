@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stats - Fitness Journey</title>
+  <link rel="stylesheet" href="stats.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Header -->
+    <div class="top-bar">
+      <h1>Stats</h1>
+    </div>
+
+    <!-- Calories today -->
+    <div class="stat-card">
+      <p class="label">Total calories this week</p>
+      <p class="value" id="caloriesTotal">0 kcal</p>
+    </div>
+
+    <!-- Graph -->
+    <div class="graph-card">
+      <canvas id="calorieGraph"></canvas>
+      <div class="day-selector">
+        <span data-day="0" class="active">Mon</span>
+        <span data-day="1">Tues</span>
+        <span data-day="2">Wed</span>
+        <span data-day="3">Thurs</span>
+        <span data-day="4">Fri</span>
+        <span data-day="5">Sat</span>
+        <span data-day="6">Sun</span>
+      </div>
+    </div>
+
+    <!-- Steps today -->
+    <div class="stat-card">
+      <p class="label">Steps today</p>
+      <p class="value" id="stepsToday">4,320</p>
+      <p class="hint">(*for now, demo value or from local storage)</p>
+    </div>
+
+    <!-- Bottom nav -->
+    <div class="bottom-nav">
+      <button class="nav" onclick="location.href='home.html'">⬜</button>
+      <button class="nav" onclick="location.href='calendar.html'">📅</button>
+      <button class="nav active" onclick="location.href='stats.html'">📊</button>
+      <button class="nav" onclick="location.href='settings.html'">⚙️</button>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="stats.js"></script>
+</body>
+</html>

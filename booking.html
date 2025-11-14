@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Confirm Booking</title>
+  <link rel="stylesheet" href="booking.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <button class="back-btn" onclick="history.back()">←</button>
+      <h1>Confirm Booking</h1>
+    </div>
+
+    <!-- Class summary -->
+    <div class="summary-card">
+      <p class="when" id="bkTime">December 11, 8am</p>
+      <h2 id="bkTitle">Pilates</h2>
+      <p class="trainer" id="bkTrainer">Trainer: Patricia Talla</p>
+      <p class="price" id="bkPrice">₱500</p>
+    </div>
+
+    <!-- Payment form -->
+    <form id="bookingForm" class="payment-form">
+      <label>
+        Payment Method
+        <select id="payMethod" required>
+          <option value="">Choose…</option>
+          <option value="gcash">GCash</option>
+          <option value="maya">Maya</option>
+        </select>
+      </label>
+
+      <label>
+        Notes (optional)
+        <textarea id="notes" rows="3" placeholder="Anything we should know?"></textarea>
+      </label>
+
+      <button type="submit" class="confirm-btn">Pay ₱500 & Confirm</button>
+    </form>
+  </div>
+
+  <script src="booking.js"></script>
+</body>
+</html>

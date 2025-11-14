@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Payment</title>
+  <link rel="stylesheet" href="subscription_payment.css">
+</head>
+<body>
+  <div class="container">
+
+    <div class="top-bar">
+      <a href="index.html" class="back-btn">←</a>
+      <h1>Pay for Premium</h1>
+    </div>
+
+    <div class="card">
+      <p class="label">Selected Plan</p>
+      <p class="value" id="planValue">Loading...</p>
+    </div>
+
+    <div class="card">
+      <p class="label">Choose payment method</p>
+
+      <select id="paymentSelect">
+        <option value="">Select method</option>
+        <option value="GCash">GCash</option>
+        <option value="Maya">Maya</option>
+      </select>
+
+      <button class="pay-btn" onclick="completePayment()">Confirm Payment</button>
+
+      <p class="msg" id="paymentMsg"></p>
+    </div>
+
+    <div class="bottom-nav">
+      <button class="nav" onclick="location.href='home.html'">⬜</button>
+      <button class="nav" onclick="location.href='calendar.html'">📅</button>
+      <button class="nav" onclick="location.href='stats.html'">📊</button>
+      <button class="nav" onclick="location.href='settings.html'">⚙️</button>
+    </div>
+
+  </div>
+
+  <script src="subscription_payment.js"></script>
+</body>
+</html>

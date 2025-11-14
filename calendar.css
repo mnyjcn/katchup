@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #2d2145 0%, #1b1533 100%);
+  color: white;
+}
+
+/* Main wrapper */
+.container {
+  width: 90%;
+  max-width: 390px;
+  margin: 16px auto 24px;
+  padding-bottom: 80px; /* space for bottom nav */
+}
+
+/* Top section */
+.top {
+  padding-top: 6px;
+}
+
+.date-text {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  opacity: 0.8;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.book-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+.arrows {
+  display: flex;
+  gap: 6px;
+}
+
+.arrow-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Weekday row */
+.weekday-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+/* Dates row – horizontal scroll */
+.date-row {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+.date-row::-webkit-scrollbar {
+  height: 4px;
+}
+.date-row::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.35);
+  border-radius: 999px;
+}
+
+.date-pill {
+  min-width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.date-pill.active {
+  background: #ffb5e2;
+  border-color: #ffb5e2;
+  color: #1b1533;
+}
+
+/* Bottom sheet – fixed height, internal scroll */
+.sheet {
+  margin-top: 18px;
+  background: #fdfdfd;
+  color: #1b1533;
+  border-radius: 24px 24px 0 0;
+  padding: 12px 18px 12px;
+  box-shadow: 0 -8px 20px rgba(0,0,0,0.4);
+
+  max-height: calc(100vh - 230px);
+  display: flex;
+  flex-direction: column;
+}
+
+.handle {
+  width: 80px;
+  height: 5px;
+  border-radius: 999px;
+  background: #e5e5e5;
+  margin: 0 auto 8px;
+}
+
+.sheet h2 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+/* Class cards container – scrollable */
+.classes-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: scroll;
+  padding-right: 6px;
+}
+.classes-list::-webkit-scrollbar {
+  width: 8px;
+}
+.classes-list::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.25);
+  border-radius: 20px;
+}
+.classes-list::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.08);
+  border-radius: 20px;
+}
+
+/* Individual class card */
+.class-card {
+  position: relative;
+  border-radius: 20px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.class-card .top-row {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+.class-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.trainer {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* “Book Here!” button in top-right */
+.card-extra {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.book-btn {
+  background: #ffffff;
+  color: #1b1533;
+  padding: 6px 14px;
+  border-radius: 14px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+  text-align: center;
+}
+
+.book-btn:hover {
+  transform: scale(1.09);
+}
+
+/* Bottom nav */
+.bottom-nav {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.bottom-nav .nav {
+  width: 60px;
+  height: 60px;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-btn.active {
+  background: #ffffff;
+  color: #1b1533;
+}
+
+/* Responsive tweaks */
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    max-width: 430px;
+  }
+}

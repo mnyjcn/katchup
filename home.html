@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Fitness Journey</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Top bar -->
+    <div class="top-bar">
+      <div class="hello">
+        <p class="hi" id="hiText">Hi!</p>
+        <p class="name" id="nameText">Ocampo,</p>
+      </div>
+
+      <div class="right-actions">
+        <button class="search-btn">🔍</button>
+        <img src="" class="profile">
+      </div>
+    </div>
+
+<!-- TODAY'S MEAL PLAN -->
+<div class="meal-header-row">
+  <div>
+    <h2 class="section-title">Today's Meal Plan</h2>
+    <p class="sub">Based on your profile and goal</p>
+  </div>
+
+  <button class="meal-edit-page-btn" onclick="location.href='mealplan.html'">
+    Edit
+  </button>
+</div>
+
+<div id="mealPlan" class="meal-plan"></div>
+
+<!-- UPCOMING ACTIVITIES (REAL BOOKINGS) -->
+<h2 class="section-title upcoming-title">Upcoming Activities</h2>
+<p class="sub">From your booked classes</p>
+<div id="upcomingList" class="upcoming-list"></div>
+
+
+    <!-- Bottom nav -->
+    <div class="bottom-nav">
+      <button class="nav active" onclick="location.href='home.html'">⬜</button>
+      <button class="nav" onclick="location.href='calendar.html'">📅</button>
+      <button class="nav" onclick="location.href='stats.html'">📊</button>
+      <button class="nav" onclick="location.href='settings.html'">⚙️</button>
+    </div>
+
+  </div>
+
+  <script src="home.js"></script>
+</body>
+</html>

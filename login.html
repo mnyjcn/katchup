@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Fitness Journey</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <div class="container">
+   
+    <div class="header">
+      <a href="index.html" class="back-btn">←</a>
+      <img src="" alt="Logo" class="logo">
+    </div>
+
+    <h1>Look who’s back to<br>break a sweat!</h1>
+
+    <form id="loginForm">
+      <input type="email" placeholder="Enter your email." required>
+      <div class="password-field">
+        <input type="password" placeholder="Enter your password." required>
+        <span class="toggle">👁️</span>
+      </div>
+
+      <a href="#" class="forgot">Forgot Password?</a>
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+
+    <p class="signup-text">Don’t have an account? <a href="register.html">Sign Up</a></p>
+  </div>
+
+  <script>
+    
+    document.getElementById('loginForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Login successful (demo only)');
+      window.location.href = 'home.html'; 
+    });
+
+   
+    const toggle = document.querySelector('.toggle');
+    const passwordInput = document.querySelector('.password-field input');
+    toggle.addEventListener('click', () => {
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+    });
+  </script>
+</body>
+</html>

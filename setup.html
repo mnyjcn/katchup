@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Setup</title>
+  <link rel="stylesheet" href="setup.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Progress dots -->
+    <div class="progress">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+
+    <!-- Question -->
+    <h1 id="questionText">What is your weight?</h1>
+
+    <!-- Unit toggle (only used for weight/height steps) -->
+    <div class="unit-toggle" id="unitToggle">
+      <button class="unit-btn active" data-unit="kg">kg</button>
+      <button class="unit-btn" data-unit="lb">lb</button>
+    </div>
+
+    <!-- Yellow card with big number & “ruler” -->
+    <div class="value-card">
+      <div id="valueDisplay" class="big-number">70</div>
+      <div id="valueUnit" class="unit-label">kg</div>
+
+      <div class="ruler">
+        <span id="leftLabel">50</span>
+        <span id="centerLabel">70</span>
+        <span id="rightLabel">90</span>
+      </div>
+
+      <input type="range" id="valueSlider" min="40" max="150" value="70" />
+    </div>
+
+    <!-- Goal chooser (shown on step 3) -->
+    <div class="goal-section" id="goalSection">
+      <button class="goal-btn active" data-goal="lose">Weight loss</button>
+      <button class="goal-btn" data-goal="healthy">Healthy living</button>
+      <button class="goal-btn" data-goal="muscle">Build muscle</button>
+    </div>
+
+    <!-- Bottom navigation -->
+    <div class="bottom-nav-setup">
+      <button class="nav-circle" id="backBtn">←</button>
+      <button class="next-btn" id="nextBtn">Next ››</button>
+    </div>
+  </div>
+
+  <script src="setup.js"></script>
+</body>
+</html>

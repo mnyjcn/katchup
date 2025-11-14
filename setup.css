@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fdfdfd;
+  color: #1b1533;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 390px;
+}
+
+/* Progress bar dots */
+.progress {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.progress .dot {
+  width: 40px;
+  height: 4px;
+  border-radius: 999px;
+  background: #e0e0e0;
+}
+
+.progress .dot.active {
+  background: #1b1533;
+}
+
+/* Question text */
+h1 {
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom: 25px;
+}
+
+/* Unit toggle */
+.unit-toggle {
+  width: 180px;
+  margin: 0 auto 18px;
+  background: #f3f1f7;
+  border-radius: 999px;
+  padding: 4px;
+  display: flex;
+}
+
+.unit-btn {
+  flex: 1;
+  border: none;
+  background: transparent;
+  border-radius: 999px;
+  padding: 8px 0;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.unit-btn.active {
+  background: #1b1533;
+  color: #fff;
+}
+
+/* Yellow card */
+.value-card {
+  background: #fff7b8;
+  border-radius: 30px;
+  padding: 30px 20px 22px;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.big-number {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.unit-label {
+  margin-top: 2px;
+  font-size: 0.9rem;
+}
+
+/* Simple ruler labels */
+.ruler {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+#valueSlider {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Goal buttons (step 3) */
+.goal-section {
+  display: none; /* shown only on step 3 */
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.goal-btn {
+  border-radius: 999px;
+  border: none;
+  padding: 10px 14px;
+  background: #f0eef7;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.goal-btn.active {
+  background: #1b1533;
+  color: #fff;
+}
+
+/* Bottom buttons */
+.bottom-nav-setup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.nav-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+.next-btn {
+  flex: 1;
+  margin-left: 16px;
+  border-radius: 22px;
+  border: none;
+  background: #1b1533;
+  color: #fff;
+  font-size: 1rem;
+  padding: 16px;
+  cursor: pointer;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Meal Plan</title>
+  <link rel="stylesheet" href="mealplan.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Top bar -->
+    <div class="top-bar">
+      <button class="back-btn" onclick="history.back()">←</button>
+      <h1>Meal Plan</h1>
+    </div>
+
+    <p class="desc">Edit your meals or add your own. Changes will show on Home.</p>
+
+    <!-- List of editable meals -->
+    <div id="editMealList" class="edit-meal-list"></div>
+
+    <!-- Add new meal -->
+    <button id="addMealBtn" class="add-meal-btn">+ Add new meal</button>
+
+    <!-- Bottom nav (optional) -->
+    <div class="bottom-nav">
+      <button class="nav" onclick="location.href='home.html'">⬜</button>
+      <button class="nav" onclick="location.href='calendar.html'">📅</button>
+      <button class="nav" onclick="location.href='stats.html'">📊</button>
+      <button class="nav" onclick="location.href='settings.html'">⚙️</button>
+    </div>
+  </div>
+
+  <script src="mealplan.js"></script>
+</body>
+</html>
